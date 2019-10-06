@@ -1,0 +1,20 @@
+<mat-drawer-container class="container" autosize>
+
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <p>This is the collapsible sidenav</p>
+        <p *ngIf="showText">Extra text could go here.</p>
+        <button (click)="showText = !showText" mat-raised-button>
+            Toggle extra text
+        </button>
+    </mat-drawer>
+    <div class="sidenav-toggler">
+        <button type="button" matfab-mini (click)="drawer.toggle()">
+            >
+        </button>
+    </div>
+
+    <div class="sidenav-content">
+
+    </div>
+
+</mat-drawer-container>
